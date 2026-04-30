@@ -6,9 +6,10 @@
         "build": "vite build",
         "preview": "$npm_execpath run build && vite preview",
         "deploy": "$npm_execpath run build && wrangler deploy",
-        "cf-typegen": "wrangler types --env-interface CloudflareBindings"
+        "typegen": "wrangler types --env-interface CloudflareBindings"
     },
     "dependencies": {
+        "@kiwa-ui/enhance": "^2.0.0",
         "clsx": "^2.1.1",
         "hono": "^4.12.16",
         "lucide": "^1.14.0",
