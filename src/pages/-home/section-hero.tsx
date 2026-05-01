@@ -3,7 +3,7 @@ import { cn } from '@/utils/variant'
 import { getButtonClasses } from '@/components/button'
 import { PlaceholderGradient } from '@/components/placeholder-gradient'
 
-type Hero01Props = {
+type SectionHeroProps = {
   title?: string
   description?: string
   primaryCta?: {
@@ -21,9 +21,9 @@ type Hero01Props = {
   class?: string
 }
 
-export const Hero01: FC<Hero01Props> = ({
-  title = 'Build, ship, and scale your next big idea',
-  description = 'The modern platform for teams who want to move fast. Powerful tools, seamless workflows, and insights that drive real results.',
+export const SectionHero: FC<SectionHeroProps> = ({
+  title = 'Your Inbox on the Edge',
+  description = 'Flarebox is self-hosted email platform powered by Cloudflare Email Routing and Cloudflare Workers.',
   primaryCta = { label: 'Get started', href: '#' },
   secondaryCta = { label: 'Learn more', href: '#' },
   image,

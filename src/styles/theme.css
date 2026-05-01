@@ -1,0 +1,119 @@
+:root {
+  --radius: 0.425rem;
+
+  --background: oklch(98.5% 0 0);
+  --background-raised: oklch(100% 0 0);
+  --background-subtle: oklch(97% 0 0);
+
+  --foreground: oklch(14.5% 0 0);
+  --foreground-muted: oklch(37.1% 0 0);
+  --foreground-soft: oklch(43.9% 0 0);
+
+  --card: var(--background-raised);
+  --card-foreground: var(--foreground);
+  --popover: var(--background-raised);
+  --popover-foreground: var(--foreground);
+
+  /* === PRIMARY: ORANGE (Cloudflare-like) === */
+  --primary: oklch(67% 0.19 52);            /* ~ #F97316 */
+  --primary-foreground: oklch(100% 0 0);    /* white text */
+  --primary-soft: oklch(95% 0.04 70);       /* ~ #FFEDD5 */
+  --primary-hover: oklch(60% 0.18 52);      /* ~ #EA580C */
+  --primary-active: oklch(54% 0.16 52);     /* deeper orange */
+
+  --secondary: oklch(97% 0 0);
+  --secondary-foreground: oklch(20.5% 0 0);
+  --secondary-soft: oklch(98.5% 0 0);
+  --secondary-hover: oklch(92.2% 0 0);
+  --secondary-active: oklch(87% 0 0);
+
+  --muted: var(--background-subtle);
+  --muted-foreground: var(--foreground-soft);
+
+  --accent: var(--background-subtle);
+  --accent-foreground: var(--foreground);
+
+  --destructive: oklch(58.6% 0.253 17.585);
+  --destructive-foreground: oklch(100% 0 0);
+  --destructive-soft: oklch(96.9% 0.015 12.422);
+  --destructive-hover: oklch(51.4% 0.222 16.935);
+
+  --success: oklch(59.6% 0.145 163.225);
+  --success-foreground: oklch(37.8% 0.077 168.94);
+  --success-soft: oklch(97.9% 0.021 166.113);
+
+  --warning: oklch(66.6% 0.179 58.318);
+  --warning-foreground: oklch(41.4% 0.112 45.904);
+  --warning-soft: oklch(98.7% 0.022 95.277);
+
+  --info: oklch(54.6% 0.245 262.881);
+  --info-foreground: oklch(37.9% 0.146 265.522);
+  --info-soft: oklch(97% 0.014 254.604);
+
+  --border: oklch(92.2% 0 0);
+  --border-subtle: oklch(94% 0 0);
+  --border-strong: oklch(87% 0 0);
+  --input: var(--border);
+  --ring: var(--primary);
+
+  --overlay-scrim: oklch(0% 0 0 / 0.8);
+}
+
+.dark {
+  --background: oklch(20.5% 0 0);
+  --background-raised: oklch(26.9% 0 0);
+  --background-subtle: oklch(14.5% 0 0);
+
+  --foreground: oklch(98.5% 0 0);
+  --foreground-muted: oklch(70.8% 0 0);
+  --foreground-soft: oklch(55.6% 0 0);
+
+  --card: var(--background-raised);
+  --card-foreground: var(--foreground);
+  --popover: var(--background-raised);
+  --popover-foreground: var(--foreground);
+
+  /* === PRIMARY: ORANGE (adjusted for dark contrast) === */
+  --primary: oklch(74% 0.18 55);            /* brighter for dark mode */
+  --primary-foreground: oklch(0% 0 0);      /* black text for contrast */
+  --primary-soft: color-mix(in oklch, var(--primary) 22%, transparent);
+  --primary-hover: oklch(80% 0.16 55);
+  --primary-active: oklch(86% 0.13 55);
+
+  --secondary: oklch(37.1% 0 0);
+  --secondary-foreground: oklch(98.5% 0 0);
+  --secondary-soft: color-mix(in oklch, var(--secondary-foreground) 10%, transparent);
+  --secondary-hover: oklch(43.9% 0 0);
+  --secondary-active: oklch(55.6% 0 0);
+
+  --muted: oklch(37.1% 0 0);
+  --muted-foreground: oklch(70.8% 0 0);
+
+  --accent: oklch(37.1% 0 0);
+  --accent-foreground: oklch(98.5% 0 0);
+
+  --destructive: oklch(64.5% 0.246 16.439);
+  --destructive-foreground: oklch(100% 0 0);
+  --destructive-soft: color-mix(in oklch, var(--destructive) 24%, transparent);
+  --destructive-hover: oklch(71.2% 0.194 13.428);
+
+  --success: oklch(69.6% 0.17 162.48);
+  --success-foreground: oklch(90.5% 0.093 164.15);
+  --success-soft: color-mix(in oklch, var(--success) 24%, transparent);
+
+  --warning: oklch(76.9% 0.188 70.08);
+  --warning-foreground: oklch(92.4% 0.12 95.746);
+  --warning-soft: color-mix(in oklch, var(--warning) 24%, transparent);
+
+  --info: oklch(62.3% 0.214 259.815);
+  --info-foreground: oklch(88.2% 0.059 254.128);
+  --info-soft: color-mix(in oklch, var(--info) 24%, transparent);
+
+  --border: oklch(37.1% 0 0);
+  --border-subtle: oklch(26.9% 0 0);
+  --border-strong: oklch(43.9% 0 0);
+  --input: var(--border);
+  --ring: var(--primary);
+
+  --overlay-scrim: oklch(0% 0 0 / 0.8);
+}
