@@ -42,12 +42,64 @@
     },
     "send_email": [
         {
-            "name": "SEND_EMAIL"
+            "name": "EMAIL",
+            "remote": true
         }
     ],
+    "r2_buckets": [
+        {
+            "binding": "BUCKET",
+            "bucket_name": "flarebox",
+            "preview_bucket_name": "flarebox"
+        }
+    ],
+    "durable_objects": {
+        "bindings": [
+            {
+                "name": "MAILBOX",
+                "class_name": "MailboxDO"
+            },
+            {
+                "name": "EMAIL_AGENT",
+                "class_name": "EmailAgent"
+            },
+            {
+                "name": "EMAIL_MCP",
+                "class_name": "EmailMCP"
+            }
+        ]
+    },
+    "ai": {
+        "binding": "AI"
+    },
+    // "migrations": [
+    //     {
+    //         "tag": "v1",
+    //         "new_sqlite_classes": [
+    //             "MailboxDO"
+    //         ]
+    //     },
+    //     {
+    //         "tag": "v2",
+    //         "new_sqlite_classes": [
+    //             "EmailAgent"
+    //         ]
+    //     },
+    //     {
+    //         "tag": "v3",
+    //         "new_sqlite_classes": [
+    //             "EmailMCP"
+    //         ]
+    //     }
+    // ],
     "vars": {
         /* Settings -> Variables and secrets */
         "NODE_VERSION": "24.14.1",
-        "PNPM_VERSION": "10.33.0"
+        "PNPM_VERSION": "10.33.0",
+        // Production deploys must also define POLICY_AUD and TEAM_DOMAIN.
+        // TEAM_DOMAIN may be the base Access URL or the full /cdn-cgi/access/certs URL.
+        // The worker now fails closed outside local development if Access is not configured.
+        "DOMAINS": "example.com",
+        "EMAIL_ADDRESSES": []
     }
 }
